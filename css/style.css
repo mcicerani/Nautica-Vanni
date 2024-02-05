@@ -105,24 +105,29 @@ h1{
     font-size:14px;
 }
 .nav__mobile{
-    visibility: hidden;
+    top: 0;
+    position: absolute;
+    visibility: collapse;
+    height: 0px;
 }
 .home__nav__mobile{
-    visibility: hidden;
+    visibility: collapse;
 }
 .home__nav__mobile__item{
-    visibility: hidden;
+    visibility: collapse;
 }
 
 .nav__mobile__item{
-    visibility: hidden;
+    visibility: collapse;
+    height: 0px;
 }
 .home__button__background{
-    visibility: hidden;
+    top: 0;
+    position: absolute;
+    visibility: collapse;
 }
-
 .button__background{
-    visibility: hidden;
+    visibility: collapse;
 }
 table,th, td {
     border: 1px solid;
@@ -293,7 +298,7 @@ section h1 {
 }
 
 .content{
-    margin: 5% 0 1% 2%;
+    margin: 0% 0 1% 2%;
     width: 98%;
     float: left;
     background-image: linear-gradient(-90deg, #EA5D43 30%, #fff 60%);
@@ -482,7 +487,7 @@ h2 .fa-solid {
     background-color: #FFFFFF;
     float: left;
     width: 100%;
-    padding-top: 5%;
+    padding-top: 1vh;
     padding-bottom: 5%;
 }
 
@@ -1054,7 +1059,7 @@ footer p a {
     .content,
     .privacy {
         width: 100%;
-        margin:3% 0 0 0;
+        margin:1vh 0 0 0;
 
     }
     p{
@@ -1388,6 +1393,7 @@ footer p a {
     }
 
     .nav__mobile__item{
+        height: auto;
         text-transform: capitalize;
         visibility: visible;
         width: 100%;
@@ -1472,7 +1478,6 @@ footer p a {
 
 
     .home__nav__mobile{
-
         visibility: visible;
         width: 100%;
         display: flex;
@@ -1495,6 +1500,7 @@ footer p a {
     .nav__mobile{
         visibility: visible;
         width: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
