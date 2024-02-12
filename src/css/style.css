@@ -552,6 +552,42 @@ align-content: center;
 .column2 img:hover {
     transform: scale(1.05);
 }
+
+.imageContainer{
+    top:    0;
+    left:   0;
+    margin: 0;
+    height: 100vh;
+    width:  100%;
+    position: fixed;
+    background-color: #0F3655;
+    z-index: 1000;
+    display: none;
+}
+
+#image__fullscreen{
+    position: absolute;
+    top:0;
+    height: 100vh;
+    width:  100vw;
+    background-position: center center ;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 99;
+}
+
+
+#close{
+    position: absolute;
+    font-size: 2rem;
+    color: #EA5D43;
+    top:   1rem;
+    right: 1rem;
+    cursor: pointer;
+    z-index: 100;
+}
+
 .nav_logo{
     width:15%
 }
@@ -1313,7 +1349,7 @@ footer p a {
         top: 1vh;
         right: 0.5vh;
         position:fixed;
-        z-index: 1000;
+        z-index: 100;
       }
       .social a i:hover{
         transform:scale(1);
