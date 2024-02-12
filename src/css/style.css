@@ -70,15 +70,15 @@ h1{
     background-color: #f4f4f8;
     z-index:100;
     font-size: 14px;
-    width: 100vw;
+    width: 95vw;
     box-shadow: 0 0 2em rgba(5,0,31,0.15);
     font-family: "Poppins", sans-serif;
     text-align: center;
     line-height: 1.8em;
     padding:2em 1.4em;
     border-radius:6px;
-    right: 0;
-    bottom: 0;
+    right: 2.5vw;
+    bottom: 5rem;
     border: solid 1px #fd5949
 }
 
@@ -573,7 +573,6 @@ align-content: center;
     background-position: center center ;
     background-size:contain;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     z-index: 99;
 }
 
