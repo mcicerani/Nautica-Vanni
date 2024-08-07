@@ -50,17 +50,42 @@ homeMenuItems.forEach(
         homeMenuItem.addEventListener("click", toggleHomeMenu);
     });
 
+
+//Funzione per immagine a schermo onclick
+
+function showImage(image) {
+    var imageContainer = document.querySelector('.imageContainer');
+    var fullscreenImage = document.getElementById('image__fullscreen');
+    fullscreenImage.style.backgroundImage = `url(${image.src})`;
+    imageContainer.style.display = 'block';
+}
+
+var images = document.querySelectorAll('.image');
+images.forEach(function(image) {
+    image.addEventListener('click', function() {
+        showImage(image);
+    });
+});
+
+var closeButton = document.getElementById('close');
+closeButton.addEventListener('click', function() {
+    var imageContainer = document.querySelector('.imageContainer');
+    imageContainer.style.display = 'none';
+});
+
+
+
 // Funzione per il Form di contatto
-document.getElementById("submit").addEventListener("click",function validateForm() {
+document.getElementById("submit").addEventListener("click", function validateForm() {
     var x = document.forms["Contattaci"]["name"].value;
     var y = document.forms["Contattaci"]["email"].value;
     var z = document.forms["Contattaci"]["message"].value;
     if (x == "" || y == "" || z == "") {
         alert("I campi non possono essere vuoti");
         return false; // Impedisce l'invio del modulo
-    }
-    else {
+    } else {
         alert("Grazie per averci contattato! Ti risponderemo al più presto.");
     }
 });
+
 

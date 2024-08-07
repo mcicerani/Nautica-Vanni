@@ -70,15 +70,15 @@ h1{
     background-color: #f4f4f8;
     z-index:100;
     font-size: 14px;
-    width: 100vw;
+    width: 95vw;
     box-shadow: 0 0 2em rgba(5,0,31,0.15);
     font-family: "Poppins", sans-serif;
     text-align: center;
     line-height: 1.8em;
     padding:2em 1.4em;
     border-radius:6px;
-    right: 0;
-    bottom: 0;
+    right: 2.5vw;
+    bottom: 5rem;
     border: solid 1px #fd5949
 }
 
@@ -552,6 +552,41 @@ align-content: center;
 .column2 img:hover {
     transform: scale(1.05);
 }
+
+.imageContainer{
+    top:    0;
+    left:   0;
+    margin: 0;
+    height: 100vh;
+    width:  100%;
+    position: fixed;
+    background-color: #0F3655;
+    z-index: 1000;
+    display: none;
+}
+
+#image__fullscreen{
+    position: absolute;
+    top:0;
+    height: 100vh;
+    width:  100vw;
+    background-position: center center ;
+    background-size:contain;
+    background-repeat: no-repeat;
+    z-index: 99;
+}
+
+
+#close{
+    position: absolute;
+    font-size: 2rem;
+    color: #EA5D43;
+    top:   1rem;
+    right: 1rem;
+    cursor: pointer;
+    z-index: 100;
+}
+
 .nav_logo{
     width:15%
 }
@@ -907,7 +942,7 @@ footer p a {
     }
     .social{
         right: 1vh;
-        top: 6vh;
+        top: 6.5vh;
 
     }
     .placeholder{
@@ -1211,8 +1246,8 @@ footer p a {
         border: none;
     }
     .container {
-        width: 85%;
-        margin-left: 7.5%;
+        width: 80%;
+        margin-left: 10%;
     }
     .container2 {
         width: 90%;
@@ -1313,7 +1348,7 @@ footer p a {
         top: 1vh;
         right: 0.5vh;
         position:fixed;
-        z-index: 1000;
+        z-index: 100;
       }
       .social a i:hover{
         transform:scale(1);
