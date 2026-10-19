@@ -95,6 +95,9 @@ circeo">
         <form name="segnalazione" class="segnalazione" method="POST" action="/segnalazione-inviata.html" enctype="multipart/form-data" netlify netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="segnalazione">
             <input type="hidden" name="subject" value="Nuova segnalazione dal sito Nautica Vanni (%{submissionId})">
+            <!-- Netlify usa il primo campo di testo come titolo e la prima textarea come riepilogo nell'elenco degli invii -->
+            <input type="text" name="title" value="Segnalazione dal sito" class="nascosto" tabindex="-1" aria-hidden="true" readonly>
+            <textarea name="riepilogo" class="nascosto" tabindex="-1" aria-hidden="true" readonly></textarea>
             <input type="file" name="modulo_pdf" hidden>
             <input type="hidden" name="errore_pdf">
             <p class="hidden">Non compilare questo campo: <input name="bot-field"></p>

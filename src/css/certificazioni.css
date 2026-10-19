@@ -82,6 +82,10 @@
 
 /* Form di segnalazione */
 
+.segnalazione .nascosto {
+    display: none;
+}
+
 .segnalazione {
     border: 1px solid #0F3655;
     border-radius: 6px;
