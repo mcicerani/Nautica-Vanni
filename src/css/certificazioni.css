@@ -1,0 +1,264 @@
+/* Pagina Certificazioni */
+
+.certificazioni {
+    width: 90%;
+    max-width: 1100px;
+    margin: 2vh auto 5vh auto;
+    color: #0F3655;
+}
+
+.certificazioni h1 {
+    margin-bottom: 1%;
+}
+
+.certificazioni h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 4% 0 2% 0;
+}
+
+.certificazioni .intro {
+    margin-bottom: 2%;
+}
+
+.documenti {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.documento {
+    flex: 1 1 300px;
+    border: 1px solid #0F3655;
+    border-radius: 6px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.documento h3 {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.documento p {
+    font-size: 16px;
+}
+
+.documento-azioni {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.btn-doc {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: 4px;
+    border: 1px solid #0F3655;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #0F3655;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.btn-doc.primario {
+    background-color: #0F3655;
+    color: #FFFFFF;
+}
+
+.btn-doc:hover {
+    transform: scale(1.05);
+}
+
+/* Form di segnalazione */
+
+.segnalazione {
+    border: 1px solid #0F3655;
+    border-radius: 6px;
+    padding: 24px;
+}
+
+.segnalazione p::first-letter,
+.certificazioni .documento p::first-letter {
+    font-size: inherit;
+}
+
+.segnalazione .nota {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.campi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 24px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo.intero {
+    grid-column: 1 / -1;
+}
+
+.campo label {
+    padding: 0;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.campo input[type=text],
+.campo input[type=email],
+.campo input[type=tel],
+.campo input[type=date],
+.campo select,
+.campo textarea {
+    width: 100%;
+    border: 1px solid #0F3655;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    padding: 12px;
+    font-size: 15px;
+    color: #0F3655;
+}
+
+.campo textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.campo small {
+    font-size: 13px;
+}
+
+.campo textarea.breve {
+    min-height: 80px;
+}
+
+.gruppo {
+    border: none;
+    margin: 20px 0;
+}
+
+.gruppo legend {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.opzioni {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.opzioni.in-linea {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+}
+
+.opzioni label {
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.opzioni input {
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.modalita {
+    border: none;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+}
+
+.modalita[data-modalita="scansione"] {
+    margin-bottom: 16px;
+}
+
+.modalita[hidden] {
+    display: none;
+}
+
+.passi {
+    margin: 10px 0 20px 20px;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.campo.altro {
+    margin-top: 12px;
+}
+
+.consenso {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.consenso input {
+    margin-top: 3px;
+}
+
+.segnalazione .invia {
+    margin-top: 20px;
+    background-color: #0F3655;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.segnalazione .invia:hover {
+    transform: scale(1.05);
+}
+
+.esito {
+    text-align: center;
+    padding: 10vh 5%;
+}
+
+.esito h1 {
+    margin-bottom: 3%;
+}
+
+@media screen and (max-width: 620px) {
+    .campi {
+        grid-template-columns: 1fr;
+    }
+
+    .certificazioni h2 {
+        font-size: 20px;
+    }
+
+    .documento,
+    .segnalazione {
+        padding: 16px;
+    }
+}
