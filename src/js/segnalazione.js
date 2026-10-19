@@ -360,6 +360,19 @@
         aggiorna();
     }
 
+    // Titolo e riepilogo mostrati nell'elenco degli invii su Netlify
+    function impostaRiepilogo(fd) {
+        if (fd.get("modalita") === "scansione") {
+            fd.set("title", "Segnalazione - modulo cartaceo scansionato");
+            fd.set("riepilogo", "Modulo compilato a mano allegato come file.");
+            return;
+        }
+        var tipo = fd.get("tipo");
+        var cosa = String(fd.get("cosa") || "").replace(/\s+/g, " ").trim();
+        fd.set("title", "Segnalazione" + (tipo ? " - " + tipo : "") + " (modulo online)");
+        fd.set("riepilogo", cosa.length > 200 ? cosa.slice(0, 200) + "…" : cosa);
+    }
+
     async function allegaModuloGenerato(form, fd) {
         try {
             var dati = datiDalForm(form);
@@ -405,6 +418,7 @@
             }
             var fd = new FormData(form);
             fd.delete("modulo_pdf");
+            impostaRiepilogo(fd);
             if (fd.get("modalita") !== "scansione" && window.PDFLib) await allegaModuloGenerato(form, fd);
             try {
                 var risposta = await fetch("/", { method: "POST", body: fd });
